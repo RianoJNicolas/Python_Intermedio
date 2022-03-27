@@ -1,7 +1,7 @@
 from ast import While
 from random import randint, randrange
 from operator import contains
-
+import os
 
 def data_read(dir):
     with open(dir,"r",encoding="utf-8") as f:
@@ -41,14 +41,19 @@ def run():
         letter_in = input("Ingresa una letra: ")
 
         list_pos = [i for i in word_dict if (letter_in == word_dict.get(i))]
-        print(list_pos)
+                
+        for i in list_pos:
+            palabra_guiones[i] = letter_in
         
-                  
-        print("La palabra es: " + word)
+        palabra_guiones_str = "".join(palabra_guiones)
+
+        os.system("clear")
         
-                        
-        game = False
-    
+        if word == palabra_guiones_str:
+            os.system("clear") 
+            print("HAS GANADO, LA PALABRA ERA: " + word)               
+            game = False
+
 
 if __name__ == '__main__':
     run()
