@@ -5,29 +5,48 @@ from operator import contains
 
 def data_read(dir):
     with open(dir,"r",encoding="utf-8") as f:
-        lista = [linea for linea in f]
+        lista = [line for line in f]
     return lista
 
 
 def word_random(lista):
-    longitud = len(lista)
-    pos = randrange(0,longitud)
+    length = len(lista)
+    pos = randrange(0,length)
     word = lista[pos].replace("\n","")
     word_dict = dict(enumerate(word))
     word_list = [letra for letra in word]
     return word, len(word), word_dict, word_list
 
 
+def guiones_generator(quantity):
+    lista = []
+    for i in range (0,quantity):
+        lista.append("_")
+    return lista
+
+
 def run():
     dir = "archivos/data.txt"
-    word, longitud, diccionario, lista = word_random(data_read(dir))
+    word, length, word_dict, word_list = word_random(data_read(dir))
     game = True
-    
-    while(game):
-        letra = input("Ingresa una letra: ")
+    palabra_guiones = guiones_generator(length)
 
-        print(word) 
-        print(diccionario)
+    while(game):
+        print("\n")
+        print("¡¡ ADIVINA LA PALABRA !!")
+        print("\n")
+
+        print(*palabra_guiones)
+
+        letter_in = input("Ingresa una letra: ")
+
+        list_pos = [i for i in word_dict if (letter_in == word_dict.get(i))]
+        print(list_pos)
+        
+                  
+        print("La palabra es: " + word)
+        
+                        
         game = False
     
 
