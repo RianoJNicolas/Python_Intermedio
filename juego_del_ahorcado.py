@@ -25,6 +25,16 @@ def guiones_generator(quantity):
     return lista
 
 
+def get_points(points,level,tries,letter,letterGuess,wordGuess):
+    try:
+        if ((wordGuess) and (tries == 1)):
+            p = points + 100
+
+
+    except:
+        pass
+
+
 def run():
     dir = "archivos/data.txt"
     word, length, word_dict, word_list = word_random(data_read(dir))
