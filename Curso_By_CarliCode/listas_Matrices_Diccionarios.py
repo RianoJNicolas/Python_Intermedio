@@ -66,3 +66,8 @@ print(personasMadrid)
 # 6. List Comprehension con un else
 # Dada una lista de números [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], crea una nueva lista 
 # multiplicando por 2 los números pares y dejando los impares como están.
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+resultado = [n*2 if n%2 == 0 else n for n in numeros]
+print(resultado)
