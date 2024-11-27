@@ -12,8 +12,9 @@ print(list1_1)
 # y quieres obtener una nueva lista con las palabras que tengan más de 3 letras 
 # y estén en mayúsculas.
 
-
-
+list2 = ["sol", "mar", "montaña", "rio", "estrella"]
+list2_1 = [x.upper() for x in list2 if len(x) > 3]
+print(list2_1)
 
 
 # 3. Crear un Diccionario con List Comprehension.
