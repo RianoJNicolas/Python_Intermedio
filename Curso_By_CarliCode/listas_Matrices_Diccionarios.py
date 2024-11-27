@@ -37,6 +37,9 @@ print(dic)
 # ]
 # Calcula la matriz traspuesta utilizando una List Comprehension anidada.
 
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrizT = [[f[i] for f in matriz] for i in range(len(matriz[0]))]
+print(matrizT)
 
 
 # 5. Extraer Información de una Lista de Diccionarios
