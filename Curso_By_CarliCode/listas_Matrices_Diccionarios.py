@@ -2,8 +2,9 @@
 # Dada una lista de números [1, 2, 3, 4, 5], crea una nueva lista 
 # que contenga el doble de cada número usando una List Comprehension.
 
-
-
+list1 = [1, 2, 3, 4, 5]
+list1_1 = [x*2 for x in list1]
+print(list1_1)
 
 
 # 2. Filtrar y Transformar en un Solo Paso. 
