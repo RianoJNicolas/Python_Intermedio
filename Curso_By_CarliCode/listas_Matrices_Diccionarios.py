@@ -22,7 +22,10 @@ print(list2_1)
 # otra de valores ["Juan", 30, "Ingeniero"]. Crea un diccionario combinando ambas 
 # listas usando una List Comprehension.
 
-
+lista3_a = ["nombre", "edad", "ocupación"]
+lista3_b = ["Juan", 30, "Ingeniero"]
+dic = {lista3_a[i]:lista3_b[i] for i in range(len(lista3_a))}
+print(dic)
 
 
 # 4. Anidación de List Comprehensions
