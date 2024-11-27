@@ -52,8 +52,15 @@ print(matrizT)
 # ]
 # Extrae una lista de nombres de personas que viven en “Madrid” y tienen más de 30 años.
 
+personas = [
+    {"nombre": "Juan", "edad": 25, "ciudad": "Madrid"},
+    {"nombre": "Ana", "edad": 32, "ciudad": "Madrid"},
+    {"nombre": "Pedro", "edad": 35, "ciudad": "Barcelona"},
+    {"nombre": "Laura", "edad": 40, "ciudad": "Madrid"}
+]
 
-
+personasMadrid = [p["nombre"] for p in personas if p["ciudad"]=="Madrid" and p["edad"] > 30]
+print(personasMadrid)
 
 
 # 6. List Comprehension con un else
