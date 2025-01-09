@@ -4,10 +4,12 @@ En este caso particular, realice dos cursos diferentes en la plataforma de Platz
 
 El repositorio se encuentra dividido en dos directorios, uno para cada curso.
 
-### Curso de Python Intermedio By CarliCode
+### Curso de Python By CarliCode
 Internamente, se divide en los siguientes archivos:
 #### Temas De Repaso
 - Listas Matrices y Diccionarios
+- Intro_POO_Clases
+- Intro2_POO_Metodos
   
 #### Retos
 - Reto - Juego de piedra papel tijera
