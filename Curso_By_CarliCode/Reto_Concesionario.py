@@ -1,6 +1,6 @@
 ## Clases para simular un concesionario de carros
 
-## Clase Carro -
+## Clase Carro - Estado avaliable True o False es visible en el concesionario
 class Carro:
     def __init__(self, marca, modelo, color, motor):
         self.marca = marca
@@ -29,21 +29,21 @@ class Cliente:
         self.telefono = telefono
         self.direccion = direccion
         self.cliente_id = cliente_id
-        self.carros = []
+        self.bought_cars = []
     
     def buyCar(self, carro):
         if carro.avalaible: 
             carro.soldCar()
-            self.carros.append(carro)
+            self.bought_cars.append(carro)
         else:
             print(f"El carro {carro.marca} modelo {carro.modelo} no está disponible en el concesionario")
     
     def showCars(self):
         print(f"Carros disponibles de {self.nombre} son: ")
-        for carro in self.carros:
+        for carro in self.bought_cars:
             print(f"{carro.marca} modelo {carro.modelo} de color {carro.color}")
         
-
+## Clase Vendedor -
 class Vendedor:
     def __init__(self, nombre, apellido, email, telefono, vendedor_id):
         self.nombre = nombre
@@ -51,6 +51,10 @@ class Vendedor:
         self.email = email
         self.telefono = telefono
         self.vendedor_id = vendedor_id
+
+    def sellCar(self, carro, cliente, fecha, precio):
+        if carro.avalaible:
+
 
 class Venta:
     def __init__(self, venta_id, carro, cliente, vendedor, fecha, precio):
