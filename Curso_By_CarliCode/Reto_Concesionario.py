@@ -20,6 +20,7 @@ class Carro:
         self.avalaible = True
         print(f"El carro {self.marca} {self.modelo} ha sido comprado")
 
+## Clase Cliente -
 class Cliente:
     def __init__(self, nombre, apellido, email, telefono, direccion, cliente_id):
         self.nombre = nombre
@@ -31,8 +32,17 @@ class Cliente:
         self.carros = []
     
     def buyCar(self, carro):
-        if carro.avalaible:
-            
+        if carro.avalaible: 
+            carro.soldCar()
+            self.carros.append(carro)
+        else:
+            print(f"El carro {carro.marca} modelo {carro.modelo} no está disponible en el concesionario")
+    
+    def showCars(self):
+        print(f"Carros disponibles de {self.nombre} son: ")
+        for carro in self.carros:
+            print(f"{carro.marca} modelo {carro.modelo} de color {carro.color}")
+        
 
 class Vendedor:
     def __init__(self, nombre, apellido, email, telefono, vendedor_id):
