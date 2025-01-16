@@ -4,20 +4,22 @@ En este caso particular, realice dos cursos diferentes en la plataforma de Platz
 
 El repositorio se encuentra dividido en dos directorios, uno para cada curso.
 
-### Curso de Python By CarliCode
+## Curso de Python By CarliCode
 Internamente, se divide en los siguientes archivos:
-#### Temas De Repaso
+### Temas De Repaso
 - Listas Matrices y Diccionarios
 - Intro_POO_Clases
 - Intro2_POO_Metodos
+- Libreria_POO
   
-#### Retos
+### Retos
 - Reto - Juego de piedra papel tijera
 - Reto - Iteradores y Generadores
+- Reto - Concesionario
 
-### Curso de Python Intermedio By FacundoGarcía
+## Curso de Python Intermedio By FacundoGarcía
 Internamente, se divide en los siguientes archivos:
-#### Temas De Repaso
+### Temas De Repaso
 - Asser and Statements
 - Debugging
 - Filtrando datos
@@ -25,7 +27,7 @@ Internamente, se divide en los siguientes archivos:
 - Listas y diccionarios
 - Archivos
   
-#### Retos
+### Retos
 - Reto de Ddiccionarios
 - Reto de Dict Comprehension
 - Reto de Filtrando datos
