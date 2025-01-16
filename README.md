@@ -11,6 +11,7 @@ Internamente, se divide en los siguientes archivos:
 - Intro_POO_Clases
 - Intro2_POO_Metodos
 - Libreria_POO
+- Herencia
   
 ### Retos
 - Reto - Juego de piedra papel tijera
