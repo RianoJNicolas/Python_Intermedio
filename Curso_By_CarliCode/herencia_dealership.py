@@ -1,5 +1,6 @@
 class Vehicle:
     def __init__(self, brand, model, price):
+        # Encapsular los datos de la clase Vehicle
         self.brand = brand
         self.model = model
         self.price = price
@@ -12,9 +13,11 @@ class Vehicle:
         else:
             print(f"El vehiculo {self.brand} no está disponible")
     
+    # Abstracción de clase
     def check_available(self):
         return self.available
     
+    # Abstracción de clase
     def get_price(self):
         return self.price
     
@@ -24,46 +27,53 @@ class Vehicle:
     def stop_engine(self):
         raise NotImplementedError("Este metodo debe ser implementado por la subclase")
 
+# Herencia de clase
 class Car(Vehicle):
+    # Polimorfismo
     def start_engine(self):
         if not self.available:
             return f"El motor del carro {self.brand} está en funcionamiento"
         else:
             return f"El carro {self.brand} no está disponible"
     
+    # Polimorfismo
     def stop_engine(self):
         if self.available:
             return f"El motor del coche {self.brand} está apagado"
         else:
             return f"El carro {self.brand} no está disponible"
 
+# Herencia de clase
 class Bike(Vehicle):
+    # Polimorfismo
     def start_engine(self):
         if not self.available:
             return f"La bicicleta {self.brand} está en marcha"
         else:
             return f"El bicicleta {self.brand} no está disponible"
     
+    # Polimorfismo
     def stop_engine(self):
         if self.available:
             return f"La bicicleta {self.brand} se ha detenido" 
         else:
             return f"La bicicleta {self.brand} no está disponible"
 
-
+# Herencia de clase
 class Truck(Vehicle):
+    # Polimorfismo
     def start_engine(self):
         if not self.available:
             return f"El motor del camión {self.brand} está en funcionamiento"
         else:
             return f"El camión {self.brand} no está disponible"
     
+    # Polimorfismo
     def stop_engine(self):
         if self.available:
             return f"El motor del camión {self.brand} está apagado"
         else:
             return f"El camión {self.brand} no está disponible"
-
 
 class Customer:
     def __init__(self, name):
@@ -87,8 +97,7 @@ class Customer:
 
 
 class Dealership:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
         self.inventory = []
         self.customers = []
 
@@ -106,3 +115,26 @@ class Dealership:
             if vehicle.check_available():
                 print(f"{vehicle.brand} {vehicle.model} por un precio de {vehicle.price}")
 
+
+car1 = Car("Toyota", "Corolla", 20000)
+bike1 = Bike("Honda", "CB500", 7000)
+truck1 = Truck("Volvo", "S80", 30000)
+
+customer1 = Customer("Juan")
+
+dealership = Dealership()
+dealership.add_vehicle(car1)
+dealership.add_vehicle(bike1)
+dealership.add_vehicle(truck1)
+
+# Mostrar el inventario
+dealership.show_inventory()
+
+# El cliente consulta el inventario
+customer1.info_vehicles(car1)
+
+# El cliente compra un vehículo
+customer1.buy_vehicle(car1)
+
+# Mostrar el inventario
+dealership.show_inventory()
