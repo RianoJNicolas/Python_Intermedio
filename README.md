@@ -13,6 +13,7 @@ Internamente, se divide en los siguientes archivos:
 - Libreria_POO
 - Herencia
 - Uso de la función super()
+- Metodos Defecto de Python
   
 ### Retos
 - Reto - Juego de piedra papel tijera
