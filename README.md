@@ -12,6 +12,7 @@ Internamente, se divide en los siguientes archivos:
 - Intro2_POO_Metodos
 - Libreria_POO
 - Herencia
+- Uso de la función super()
   
 ### Retos
 - Reto - Juego de piedra papel tijera
